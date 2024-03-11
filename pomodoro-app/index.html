@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="./estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="pomodoro">
+
+      <svg class="pomodoro__circle" viewbox="0 0 100 100">
+          <circle class="pomodoro__progress-transparent" cx="50" cy="50" r="42"></circle>
+
+          <circle class="pomodoro__progress-bg" cx="50" cy="50" r="42"></circle>
+      </svg>
+
+      <article class="pomodoro__time">
+        <p class="pomodoro__timer">00:00</p>
+        <p class="pomodoro__legend">FOCUS</p>
+      </article>
+
+     
+  </section>
+ 
+  <article class="pomodoro__controls">
+
+      <button class="pomodoro__buttons pomodoro__buttons--play" data-status="start">
+        <img src="./assets/play.svg" class="pomodoro__img">
+      </button>
+
+      <button class="pomodoro__buttons pomodoro__buttons--refresh">
+        <img src="assets/refresh.svg" class="pomodoro__img">
+      </button>
+
+      <button class="pomodoro__buttons pomodoro__buttons--next">
+        <img src="assets/next.svg" class="pomodoro__img">
+      </button>
+  </article>
+
+
+  <audio src="./assets/song.mp3" class="alarm"></audio>
+
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

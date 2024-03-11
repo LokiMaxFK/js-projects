@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Orbitron", sans-serif;
+    background-color: #202024;
+}
+
+button, input{
+    font: inherit;
+}
+
+.timer{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.timer__time{
+    text-align: center;
+    font-size: 4.5rem;
+    color: white;
+}
+
+/* Buttons */
+
+.timer__buttons{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    margin-top: 2rem;
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    padding: .6rem 2rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.timer__init{
+    background-color: #00875F;
+}
+
+.timer__paused[data-status="paused"]{
+    --text: "Pausar Timer";
+    background-color: #e9216e;
+}
+
+.timer__paused[data-status="continue"]{
+    --text: "Continuar Timer";
+    background-color: #0565af;
+}
+
+.timer__paused::after{
+    content: var(--text);
+}
+
+.timer__restart{
+    
+    background-color: #c03503;
+}
+
+@media (width >= 600px) {
+    
+    .timer__time{
+        font-size: 6rem;
+    }
+
+}
